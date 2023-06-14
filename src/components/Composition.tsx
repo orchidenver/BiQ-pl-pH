@@ -8,19 +8,19 @@ export default function Composition() {
 
   const compositionEls: string[] = [
     "TDS mg/l",
-    "550",
+    "143",
     "pH",
-    "7.4",
+    "9.8",
     "Silica",
-    "7.2",
+    "50",
     "HCO3",
-    "402",
-    "Mg",
-    "34",
+    "9",
     "Ca",
-    "62",
+    "2.3",
     "Na",
-    "<2",
+    "33",
+    "SO4",
+    "19",
   ];
   return (
     <>
@@ -28,7 +28,7 @@ export default function Composition() {
         <div className="item item-bold" id="item-head">
           {lang === "ENG" ? "Countries of origin" : "Kraje pochodzenia"}
         </div>
-        <div className="item">Serbia</div>
+        <div className="item">Bulgaria</div>
       </div>
       <Divider />
       <div className="container">

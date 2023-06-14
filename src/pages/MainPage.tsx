@@ -23,9 +23,9 @@ export default function MainPage() {
       <Helmet>
         <meta
           name="description"
-          content="BiQ Still - is a site about the power of still water"
+          content="BiQ pH - is a site about the power of water"
         />
-        <title>BiQ Still</title>
+        <title>BiQ pH</title>
       </Helmet>
       <Banner />
       <div className="moto">
@@ -40,52 +40,46 @@ export default function MainPage() {
       <ImgComponent link={promo} altText="promo" banner={false} />
       <Divider />
       <TextBlock
-        header={
-          lang === "ENG" ? "Distilled from nature" : "Destylowana z natury"
-        }
+        header={lang === "ENG" ? "Natural being" : "Naturalne istnienie"}
         element="DIV"
       >
         {
           <>
             <p className="list-block-paragraph">
               {lang === "ENG"
-                ? "Humanity is rethinking the way we live. In a complex age, we strive for pure simplicity in our mental and physical health. This return to essentials applies to our planet, too. We can only improve our world by preserving the essential beauty that already exists in nature. Still water is essential because:"
-                : "Ludzkość przemyślała sposób naszego życia. W czasach pełnych złożoności, dążymy do czystej prostoty dla naszego zdrowia mentalnego i fizycznego. Ten powrót do podstaw odnosi się także do naszej planety. Możemy poprawić nasz świat tylko poprzez zachowanie esencjonalnego piękna, które już istnieje w naturze."}
+                ? "All of us are born by nature, from nature, of nature. Our bodies are made of water, so pH water is vital because:"
+                : "Wszyscy jesteśmy narodzeni przez naturę, z natury, z natury. Nasze ciała są zbudowane z wody, dlatego woda o pH jest niezbędna, ponieważ:"}
             </p>
             <ul>
               <li>
                 {lang === "ENG"
-                  ? "Quality of drinking water affects all parts of human existence."
-                  : "Jakość wody pitnej wpływa na wszystkie aspekty istnienia człowieka."}
+                  ? "The purity of water defines our quality of our life and wellbeing."
+                  : "Czystość wody definiuje jakość naszego życia i dobre samopoczucie."}
               </li>
               <li>
                 {lang === "ENG"
-                  ? "Still water is balanced correctly for natural being."
-                  : "Woda niegazowana jest odpowiednio zrównoważona dla naturalnego bytu."}
+                  ? "pH water is balanced correctly for natural beings."
+                  : "Woda o pH jest właściwie zrównoważona dla istot naturalnych."}
               </li>
               <li>
                 {lang === "ENG"
-                  ? "Still water is enriched with the purity of deep sources."
-                  : "Woda niegazowana jest wzbogacona czystością głębokich źródeł."}
+                  ? "pH water is enriched with minerals from natural sources, right into the bottle."
+                  : "Woda o pH jest wzbogacona minerałami z naturalnych źródeł, bezpośrednio do butelki."}
               </li>
             </ul>
             <p className="list-block-paragraph">
               {lang === "ENG"
-                ? "Get closer to your original natural state with still water bottled straight from the source."
-                : "Zbliż się do swojego pierwotnego stanu naturalnego dzięki wodzie niegazowanej butelkowanej prosto z źródła."}
+                ? "The higher the pH, the lower the number of hydrogen ions in the liquid — and the better for human health. Feel the invigorating energy that clear pH water brings to your day."
+                : "Im wyższe pH, tym mniejsza liczba jonów wodoru w płynie - i tym lepiej dla zdrowia człowieka. Poczuj energetyzującą energię, jaką czysta woda o pH wnosi w twoje życie."}
             </p>
           </>
         }
       </TextBlock>
       <Divider />
-      <TextBlock
-        header={
-          lang === "ENG" ? "All in one bottle" : "Wszystko w jednej butelce"
-        }
-      >
+      <TextBlock header={lang === "ENG" ? "Water flow" : "Przepływ wody"}>
         {lang === "ENG"
-          ? "One bottle. Nothing but still water inside. And when you know the source, you taste the purity even more. From the very beginning, we use only specially-selected sources of pure water. Then with science, we recreate water cycle as it occurs all over our earth. Throughout the entire process — producing glass bottles, designing distribution lines, even crafting packaging — we ensure the highest quality, bringing purity from nature right to you."
-          : "Jedna butelka. W środku tylko woda niegazowana. A kiedy znasz jej źródło, smak czystości staje się jeszcze bardziej wyraźny. Już od samego początku korzystamy tylko z specjalnie wybranych źródeł czystej wody. Następnie, przy użyciu nauki, odtwarzamy cykl wody, tak jak zachodzi to na całej naszej planecie. Przez cały proces - produkcję szklanych butelek, projektowanie linii dystrybucji, nawet tworzenie opakowań - zapewniamy najwyższą jakość, przynosząc czystość prosto z natury do Ciebie."}
+          ? "This water comes from a source selected from over 50 springs in Europe. Our production recreates the water cycle as it has occurred in nature forever, long before human intervention. BiQ’s specially-designed process brings water from its source to your bottle. With distillation, purification, and flow patterns that replicate the temperature and pressure found in nature, we restore water to its naturally perfect state."
+          : "Ta woda pochodzi z wybranej źródłowej z ponad 50 źródeł w Europie. Nasza produkcja odtwarza cykl wodny tak, jak działo się to naturalnie zawsze, dużo wcześniej niż interwencja człowieka. Proces specjalnie zaprojektowany przez BiQ przekształca wodę z jej źródła do Twojej butelki. Dzięki destylacji, oczyszczaniu i wzorców przepływu, które replikują temperaturę i ciśnienie występujące w naturze, przywracamy wodę do jej naturalnie doskonałego stanu."}
       </TextBlock>
       <ImgComponent link={productImg} altText="water" banner={false} />
       <TextBlock
@@ -120,7 +114,7 @@ export default function MainPage() {
               fontSize: lang === "ENG" ? 20 : 16,
             }}
           >
-            {lang === "ENG" ? "Still water" : "Woda Bezgazowa"}
+            {lang === "ENG" ? "pH water" : "Woda Ph"}
           </span>
           <span
             className="product-info-item gray"

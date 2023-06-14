@@ -15,7 +15,7 @@ export default function Policy() {
           name="description"
           content="Here you can read out cookies policy"
         />
-        <title>BiQ Still - Cookies policy</title>
+        <title>BiQ pH - Cookies policy</title>
       </Helmet>
       <section className="policy">
         <p className="policy-head">

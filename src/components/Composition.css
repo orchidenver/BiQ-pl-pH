@@ -21,7 +21,7 @@
 .item {
   font-family: "StolzlBook";
   font-weight: 400;
-  color: #15223680;
+  color: #152236;
 }
 
 .item + .item-compos:nth-child(odd) {

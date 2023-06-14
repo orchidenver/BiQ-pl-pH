@@ -8,7 +8,7 @@ export default function Page404() {
     <>
       <Helmet>
         <meta name="description" content="Page not found" />
-        <title>BiQ Still - Page 404</title>
+        <title>BiQ pH - Page 404</title>
       </Helmet>
       <section className="not-found">
         <p className="not-found-head">404</p>

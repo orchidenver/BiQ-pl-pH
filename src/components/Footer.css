@@ -1,5 +1,5 @@
 .footer {
-  background-color: #91979b;
+  background-color: #3a4d66;
   padding: 25px 20px 30px;
 }
 
@@ -32,7 +32,7 @@ label {
 
 input[type="email"] {
   height: 40px;
-  background-color: #91979b;
+  background-color: #3a4d66;
   border: 1px solid #ffffff;
   border-radius: 72px;
   padding: 0 20px 0 20px;
@@ -50,7 +50,7 @@ input[type="email"]::placeholder {
 }
 
 textarea {
-  background-color: #91979b;
+  background-color: #3a4d66;
   border: 1px solid #ffffff;
   border-radius: 19px;
   padding: 20px;
@@ -71,7 +71,7 @@ textarea::placeholder {
 
 input[type="submit"] {
   background-color: #ffffff;
-  color: #91979b;
+  color: #152236;
   height: 40px;
   border-color: transparent;
   border-radius: 72px;
@@ -82,7 +82,7 @@ input[type="submit"] {
 }
 
 input[type="submit"].success {
-  background-color: #91979b;
+  background-color: #3a4d66;
   color: #ffffff;
   border: 1px solid #ffffff;
 }
@@ -98,7 +98,7 @@ input[type="submit"]:focus {
 }
 
 input[type="submit"]:disabled {
-  background-color: #91979b;
+  background-color: #3a4d66;
   border: 1px solid #ffffff;
   color: #ffffff;
 }

@@ -26,6 +26,7 @@
   font-family: "NexaHeavy";
   font-weight: 900;
   align-self: normal;
+  color: #152236;
 }
 
 .cookies-text {
@@ -34,6 +35,7 @@
   font-size: 14px;
   padding: 0 15px;
   line-height: 20px;
+  color: #152236;
 }
 
 .cookies-btns {
@@ -58,7 +60,7 @@
 }
 
 .cookies-btn.color {
-  background-color: #91979b;
+  background-color: #3a4d66;
   color: #ffffff;
   border-color: transparent;
 }
@@ -67,7 +69,7 @@
   font-family: "StolzlLight";
   font-weight: 400;
   font-size: 14px;
-  color: #152236;
+  color: #91979b;
   align-self: normal;
   padding-left: 2px;
 }

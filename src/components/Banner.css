@@ -18,7 +18,7 @@
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  color: #91979b;
+  color: #3a4d66;
   font-size: 30px;
 }
 
@@ -30,14 +30,14 @@
   width: 6px;
   height: 6px;
   background: transparent;
-  border: 2px solid #656769;
+  border: 2px solid #3a4d66;
   border-radius: 50%;
 }
 
 .swiper-pagination-bullet-active {
   color: #fff;
-  background: #91979b;
-  border: 2px solid #91979b;
+  background: #3a4d66;
+  border: 2px solid #3a4d66;
 }
 
 .swiper-horizontal > .swiper-pagination-bullets,

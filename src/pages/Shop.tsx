@@ -27,15 +27,13 @@ export default function Shop() {
     <>
       <Helmet>
         <meta name="description" content="Here you can buy our product" />
-        <title>BiQ Still - Shop</title>
+        <title>BiQ pH - Shop</title>
       </Helmet>
       <main>
         <Banner />
         <div className="shop">
-          <p className="shop-head">{lang === "ENG" ? "STILL" : "WODA"}</p>
-          <p className="shop-head">
-            {lang === "ENG" ? "WATER" : "NIEGAZOWANA"}
-          </p>
+          <p className="shop-head">{lang === "ENG" ? "pH" : "WODA"}</p>
+          <p className="shop-head">{lang === "ENG" ? "WATER" : "Ph"}</p>
           <div className="capacity-btns">
             <button
               className={`${
