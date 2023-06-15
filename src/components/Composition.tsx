@@ -23,21 +23,21 @@ export default function Composition() {
     "19",
   ];
   return (
-    <>
-      <div className="container">
+    <article>
+      <section className="container">
         <div className="item item-bold" id="item-head">
           {lang === "ENG" ? "Countries of origin" : "Kraje pochodzenia"}
         </div>
         <div className="item">Bulgaria</div>
-      </div>
+      </section>
       <Divider />
-      <div className="container">
+      <section className="container">
         {compositionEls.map((el: string, i: number) => (
           <div className="item item-compos" key={el + i}>
             {el}
           </div>
         ))}
-      </div>
-    </>
+      </section>
+    </article>
   );
 }

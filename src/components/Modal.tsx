@@ -38,7 +38,7 @@ export default function Modal({ btnText, open, onClose }: ModalProps) {
   return createPortal(
     <>
       <div className="overlay" />
-      <div className="modal">
+      <aside className="modal">
         <p className="modal-head">
           {lang === "ENG" ? "Great choice!" : "Doskonały wybór!"}
         </p>
@@ -81,7 +81,7 @@ export default function Modal({ btnText, open, onClose }: ModalProps) {
             </button>
           </form>
         )}
-      </div>
+      </aside>
     </>,
     document.getElementById("modal")!
   );

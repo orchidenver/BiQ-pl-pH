@@ -24,19 +24,19 @@ export default function Cart({ open }: CartProps) {
   const [openModal, setOpenModal] = useState<boolean>(false);
 
   return (
-    <div className={open ? "sidebar active" : "sidebar"}>
+    <aside className={open ? "sidebar active" : "sidebar"}>
       <Divider />
       {bottles.quantity > 0 ? (
         <>
-          <div className="product">
-            <div className="img-container">
+          <article className="product">
+            <section className="img-container">
               <img
                 src={bottleImg}
                 alt="product image"
                 className="product-img bottle"
               />
-            </div>
-            <div className="product-info">
+            </section>
+            <section className="product-info">
               <div className="product-desc">
                 <p className="product-name">
                   {lang === "ENG" ? "Bottle" : "Butelka"}
@@ -60,8 +60,8 @@ export default function Cart({ open }: CartProps) {
                   +
                 </button>
               </div>
-            </div>
-            <div className="product-actions">
+            </section>
+            <section className="product-actions">
               <p className="product-price">{`${bottles.totalSum.toFixed(
                 1
               )} zł`}</p>
@@ -71,18 +71,18 @@ export default function Cart({ open }: CartProps) {
               >
                 <img src={removeImg} alt="remove" />
               </button>
-            </div>
-          </div>
+            </section>
+          </article>
           <Divider />
         </>
       ) : null}
       {boxes.quantity > 0 ? (
         <>
-          <div className="product">
-            <div className="img-container">
+          <article className="product">
+            <section className="img-container">
               <img src={boxImg} alt="product image" className="product-img" />
-            </div>
-            <div className="product-info">
+            </section>
+            <section className="product-info">
               <div className="product-desc">
                 <p className="product-name">
                   {lang === "ENG" ? (
@@ -114,8 +114,8 @@ export default function Cart({ open }: CartProps) {
                   +
                 </button>
               </div>
-            </div>
-            <div className="product-actions">
+            </section>
+            <section className="product-actions">
               <p className="product-price">{`${boxes.totalSum.toFixed(
                 1
               )} zł`}</p>
@@ -125,8 +125,8 @@ export default function Cart({ open }: CartProps) {
               >
                 <img src={removeImg} alt="remove" />
               </button>
-            </div>
-          </div>
+            </section>
+          </article>
           <Divider />
         </>
       ) : null}
@@ -145,6 +145,6 @@ export default function Cart({ open }: CartProps) {
         </button>
       </div>
       <Modal open={openModal} onClose={() => setOpenModal(false)} />
-    </div>
+    </aside>
   );
 }

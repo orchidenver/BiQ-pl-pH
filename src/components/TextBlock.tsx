@@ -9,13 +9,13 @@ export default function TextBlock({
   element,
 }: TextBlockProps) {
   return (
-    <>
+    <section>
       <p className="text-block-header">{header}</p>
       {element === "DIV" ? (
         <div className="text-block-paragraph">{children}</div>
       ) : (
         <p className="text-block-paragraph">{children}</p>
       )}
-    </>
+    </section>
   );
 }
