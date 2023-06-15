@@ -1,7 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import reportWebVitals from "./reportWebVitals";
-import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
+import {
+  createBrowserRouter,
+  RouterProvider,
+  Outlet,
+  useLocation,
+} from "react-router-dom";
 import { AppProvider } from "./context/context";
 import MainPage from "./pages/MainPage";
 import Shop from "./pages/Shop";
@@ -18,6 +23,11 @@ import "./fonts/nexa-heavy.ttf";
 
 function Layout() {
   const [cookies] = useCookies(["cookieConsent"]);
+  const { pathname } = useLocation();
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <>
