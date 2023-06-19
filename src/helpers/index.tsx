@@ -9,14 +9,14 @@ function getCartLocalStorage() {
         name: "Bottle",
         capacity: "1.0",
         quantity: 0,
-        price: 1.6,
+        price: 9.6,
         totalSum: 0,
       },
       boxes: {
         name: "Box",
         capacity: "1.0",
         quantity: 0,
-        price: 9.6,
+        price: 86.4,
         totalSum: 0,
       },
     };
