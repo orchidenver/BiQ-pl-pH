@@ -92,7 +92,7 @@ export default function Shop() {
               <p className="shop-product">
                 {lang == "ENG" ? "Bottle" : "Butelka"}
               </p>
-              <p className="shop-price">{`${bottles.price} zł`}</p>
+              <p className="shop-price">{`${bottles.price.toFixed(1)} zł`}</p>
               <div className="shop-count">
                 <button
                   type="button"
@@ -120,7 +120,7 @@ export default function Shop() {
                   (9 {lang === "ENG" ? "pcs" : "szt."})
                 </span>
               </p>
-              <p className="shop-price">{`${boxes.price} zł`}</p>
+              <p className="shop-price">{`${boxes.price.toFixed(1)} zł`}</p>
               <div className="shop-count">
                 <button
                   type="button"
