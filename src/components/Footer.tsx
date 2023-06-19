@@ -2,7 +2,9 @@ import { useState, useEffect } from "react";
 import Divider from "./Divider";
 import { useAppContext } from "../context/context";
 import { Link } from "react-router-dom";
-import emailjs from "@emailjs/browser";
+import axios from "axios";
+import { FooterFeedback } from "../interfaces";
+import { responseHandler } from "../helpers";
 import "./Footer.css";
 
 export default function Footer() {
@@ -13,6 +15,7 @@ export default function Footer() {
     string | number | readonly string[] | undefined
   >("");
   const [success, setSuccess] = useState<boolean>(false);
+  const [error, setError] = useState<boolean>(false);
   const { lang } = useAppContext();
 
   useEffect(() => {
@@ -25,19 +28,47 @@ export default function Footer() {
     };
   }, [success]);
 
-  function onSubmitHandler(e: React.FormEvent<HTMLFormElement>) {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setError(false);
+    }, 4000);
+
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [error]);
+
+  async function onSubmitHandler(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSuccess(true);
 
-    // emailjs.sendForm(
-    //   "YOUR_SERVICE_ID",
-    //   "YOUR_TEMPLATE_ID",
-    //   footerEmailValue,
-    //   "YOUR_PUBLIC_KEY"
-    // );
+    try {
+      const { status } = await axios.post<FooterFeedback>(
+        "https://ohopewater.com/feedback",
+        {
+          email: footerEmailValue,
+          message: footerTextValue,
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Accept: "application/json",
+          },
+        }
+      );
 
-    setFooterTextValue("");
-    setFooterEmailValue("");
+      if (status !== 200 && status !== 201) {
+        setSuccess(false);
+        throw new Error("Something went wrong");
+      }
+
+      setSuccess(true);
+    } catch (error) {
+      setError(true);
+      console.log(error);
+    } finally {
+      setFooterTextValue("");
+      setFooterEmailValue("");
+    }
   }
 
   const enabled: boolean = !!footerTextValue && !!footerEmailValue;
@@ -73,15 +104,7 @@ export default function Footer() {
         <input
           className={!success ? "" : "success"}
           type="submit"
-          value={
-            !success
-              ? lang === "ENG"
-                ? "Send"
-                : "Wyślij"
-              : lang === "ENG"
-              ? "Your message has been sent"
-              : "Wiadomość wysłana"
-          }
+          value={responseHandler(success, error, lang)}
           disabled={!enabled}
         />
       </form>
