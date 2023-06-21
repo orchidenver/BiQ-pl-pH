@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useMediaQuery } from "usehooks-ts";
 import Banner from "../components/Banner";
 import Divider from "../components/Divider";
 import Button from "../components/Button";
@@ -14,9 +15,11 @@ import productImg from "../assets/product-example.jpg";
 import productImg2 from "../assets/product-example-2.jpg";
 import logo from "../assets/logo.jpg";
 import promo from "../assets/promo.jpg";
+import desktop from "../assets/desktop.png";
 
 export default function MainPage() {
   const { lang } = useAppContext();
+  const matches = useMediaQuery("(min-width: 414px)");
 
   return (
     <>
@@ -136,7 +139,11 @@ export default function MainPage() {
             {lang === "ENG" ? "More info" : "Dodatkowo"}
           </Button>
         </div>
-        <ImgComponent link={logo} altText="logo" banner={false} />
+        <ImgComponent
+          link={matches ? desktop : logo}
+          altText="logo"
+          banner={false}
+        />
         <Composition />
       </main>
     </>
