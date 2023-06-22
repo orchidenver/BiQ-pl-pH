@@ -8,7 +8,6 @@ import ImgComponent from "../components/ImgComponent";
 import Composition from "../components/Composition";
 import { useAppContext } from "../context/context";
 import { Helmet } from "react-helmet";
-import { useLocation } from "react-router";
 
 import "./MainPage.css";
 
@@ -21,11 +20,6 @@ import desktop from "../assets/desktop.png";
 export default function MainPage() {
   const { lang } = useAppContext();
   const matches = useMediaQuery("(min-width: 414px)");
-  const { pathname } = useLocation();
-
-  React.useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
 
   return (
     <>
