@@ -43,6 +43,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
+    errorElement: <Page404 />,
     children: [
       {
         path: "/",
@@ -59,10 +60,6 @@ const router = createBrowserRouter([
       {
         path: "cookies",
         element: <Cookies />,
-      },
-      {
-        path: "*",
-        element: <Page404 />,
       },
     ],
   },
