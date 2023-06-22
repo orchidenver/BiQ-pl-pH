@@ -1,7 +1,5 @@
 import { useAppContext } from "../context/context";
 import { Helmet } from "react-helmet";
-import NavBar from "../components/NavBar";
-import Footer from "../components/Footer";
 import "./Page404.css";
 
 export default function Page404() {
@@ -12,7 +10,6 @@ export default function Page404() {
         <meta name="description" content="Page not found" />
         <title>BiQ pH - Page 404</title>
       </Helmet>
-      <NavBar />
       <section className="not-found">
         <p className="not-found-head">404</p>
         <p className="not-found-desc">
@@ -24,7 +21,6 @@ export default function Page404() {
             : "Ta strona nie istnieje"}
         </p>
       </section>
-      <Footer />
     </>
   );
 }

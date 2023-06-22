@@ -16,6 +16,7 @@ import Footer from "./components/Footer";
 import Policy from "./pages/Policy";
 import Cookies from "./pages/Cookies";
 import CookiesModal from "./components/CookiesModal";
+import { RootRoute } from "./pages/RootRoute";
 import { useCookies } from "react-cookie";
 
 import "./index.css";
@@ -43,7 +44,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
-    errorElement: <Page404 />,
+    errorElement: <RootRoute outlet={<Page404 />} />,
     children: [
       {
         path: "/",
