@@ -1,9 +1,16 @@
+import * as React from "react";
 import { useAppContext } from "../context/context";
 import { Helmet } from "react-helmet";
+import { useLocation } from "react-router";
 import "./Page404.css";
 
 export default function Page404() {
   const { lang } = useAppContext();
+  const { pathname } = useLocation();
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return (
     <>
       <Helmet>

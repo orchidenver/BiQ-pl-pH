@@ -1,3 +1,5 @@
+import * as React from "react";
+import { useLocation } from "react-router";
 import Banner from "../components/Banner";
 import Composition from "../components/Composition";
 import ImgComponent from "../components/ImgComponent";
@@ -22,6 +24,11 @@ export default function Shop() {
     changePrice,
     lang,
   } = useAppContext();
+  const { pathname } = useLocation();
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   return (
     <>

@@ -1,3 +1,5 @@
+import * as React from "react";
+import { useLocation } from "react-router";
 import Divider from "../components/Divider";
 import PolicyTextComponent from "../components/PolicyTextComponent";
 import { useAppContext } from "../context/context";
@@ -7,6 +9,12 @@ import "../pages/Policy.css";
 
 export default function Policy() {
   const { lang } = useAppContext();
+  const { pathname } = useLocation();
+
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <>
       <Helmet>
